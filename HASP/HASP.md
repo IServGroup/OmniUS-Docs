@@ -54,7 +54,7 @@
 1. Разрешить соединения по порту `1947` (и UDP и TCP)
 2. Установить драйвер Sentinel HASP Run time Environment (актуальная версия - [на сайте Sentinel по состоянию на 11.09.2018](https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119), в локальной сети - [`\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip`](file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\!%20New\Sentinel_LDK_Run-time_setup.zip))
 3. Запустить консоль управления Sentinel Admin Control Center, перейдя в браузере по адресу [http://localhost:1947](http://localhost:1947), и разрешить удаленные подключения на вкладке [Access from Remote Clients](http://localhost:1947/_int_/config_from.html):
-![Access from Remote Clients](img/sentinel-hasp-setup-server.png?raw=true)
+![Access from Remote Clients](img/sentinel-hasp-setup-server.png)
 
 ## Дополнительно ##
 Для работы ключей Aladdin HASP по сети в любом случае необходим запуск HASP License Manager, но драйвер может быть использован и современный (Sentinel HASP Run time Environment), т.к. он успешно обеспечивает работу USB-ключа как устройства HASP.
@@ -108,7 +108,7 @@
 3. установить драйвер Sentinel HASP Run time Environment (актуальная версия - [на сайте Sentinel](https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&c=End+User&p=Sentinel+HASP&o=Windows&t=Runtime+%26+Device+Driver&l=all), в локальной сети - [`\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip`](file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\!%20New\Sentinel_LDK_Run-time_setup.zip))
 4. запустить на пользовательской машине консоль управления Sentinel Admin Control Center перейдя в браузере по адресу [http://localhost:1947](http://localhost:1947)
 5. Указать адрес "HASP-сервера" на вкладке [Access to Remote License Managers](http://localhost:1947/_int_/config_to.html) в поле `Remote License Search Parameters`:
-![Access to Remote License Managers](img/sentinel-hasp-setup-client.png?raw=true), отключить широковещательные запросы (снять флаг "`Broadcast Search for Remote Licenses`"), если broadcast пакеты не обрабатываются; разрешить поиск ключей по сети (включить флаг "`Allow Access to Remote Licenses`"), если он по какой-либо причине ещё не разрешен.
+![Access to Remote License Managers](img/sentinel-hasp-setup-client.png), отключить широковещательные запросы (снять флаг "`Broadcast Search for Remote Licenses`"), если broadcast пакеты не обрабатываются; разрешить поиск ключей по сети (включить флаг "`Allow Access to Remote Licenses`"), если он по какой-либо причине ещё не разрешен.
 
 # Запись USB-ключа HASP #
 Запись лицензируемых параметров на USB-ключ осуществляется IServ либо непосредственно на ключ при наличии физического доступа к нему, либо в специальный файл *.V2C, который заказчик Omni-US самостоятельно применяет к ключу.
@@ -170,17 +170,17 @@
 В случае с Aladdin HASP доступность ключа и количество активных подключений можно увидеть с помощью утилиты Aladdin DiagnostiX ([http://safenet-sentinel.ru/files/diagnostix_installer.zip](http://safenet-sentinel.ru/files/diagnostix_installer.zip), в локальной сети - [`\\\fs02\Dev_Repository\Builds\DLL\HASP-old\DiagnostiX_Installer.zip`](file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-old\DiagnostiX_Installer.zip)).
 
 При запуске Aladdin DiagnostiX необходимо указать адрес машины с ключом:
-![Aladdin DiagnostiX nethasp.ini](img/diagnostix-nethasp.png?raw=true)
+![Aladdin DiagnostiX nethasp.ini](img/diagnostix-nethasp.png)
 
 файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - [`\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc`](file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc)) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
-![Aladdin DiagnostiX Check](img/diagnostix-check.png?raw=true)  
+![Aladdin DiagnostiX Check](img/diagnostix-check.png)  
 
 ### Sentinel HASP ###
 В случае с Sentinel HASP количество активных подключений отображается в консоли управления Sentinel Admin Control Center ([http://localhost:1947](http://localhost:1947)) на вкладке [Sentinel Keys](http://localhost:1947/_int_/devices.html):
-![Sentinel Keys Sessions](img/sentinel-client-sessions.png?raw=true)
+![Sentinel Keys Sessions](img/sentinel-client-sessions.png)
 
 Для просмотра доступных на данной машине функций (Feature) Omni-US необходимо перейти на вкладку [Features](http://localhost:1947/_int_/features.html):
-![Features](img/sentinel-client-features.png?raw=true)
+![Features](img/sentinel-client-features.png)
 
 На приведенном скриншоте видны функции №№1, 2, 3, прописанные на USB-ключе, размещенном на машине PC-008, причем:
 
