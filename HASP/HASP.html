@@ -335,13 +335,13 @@ img {
 <h2>Aladdin HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>475</code> (и UDP и TCP)</li>
-<li>Установить драйвер (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, распространяемая с инсталлятором Omnis версия - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\drivers\HASPUserSetup.exe"><code>\fs02\Dev_Repository\Builds\Install HASP drivers\drivers\HASPUserSetup.exe</code></a>.</li>
-<li>Установить и запустить HASP License Manager (<a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\HASP_LM_setup\lmsetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\HASP_LM_setup\lmsetup.exe</code></a> либо <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589948742">на сайте Sentinel</a>) - специальное приложение Aladdin, осуществляющее обмен данными между USB-ключом и защищенным приложением (далее - <em>HASP LM</em>).</li>
+<li>Установить драйвер (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, распространяемая с инсталлятором Omnis версия - <a href="file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\drivers\HASPUserSetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\drivers\HASPUserSetup.exe</code></a>.</li>
+<li>Установить и запустить HASP License Manager (<a href="file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\HASP_LM_setup\lmsetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\HASP_LM_setup\lmsetup.exe</code></a> либо <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589948742">на сайте Sentinel</a>) - специальное приложение Aladdin, осуществляющее обмен данными между USB-ключом и защищенным приложением (далее - <em>HASP LM</em>).</li>
 </ol>
 <h2>Sentinel HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>1947</code> (и UDP и TCP)</li>
-<li>Установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, в локальной сети - [<code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>](file:///\\fs02\Dev<em>Repository\Builds\Install HASP drivers! New\Sentinel</em>LDK<em>Run-time</em>setup.zip))</li>
+<li>Установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, в локальной сети - [<code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>](file:///\\\fs02\Dev<em>Repository\Builds\Install HASP drivers! New\Sentinel</em>LDK<em>Run-time</em>setup.zip))</li>
 <li>Запустить консоль управления Sentinel Admin Control Center, перейдя в браузере по адресу <a href="http://localhost:1947">http://localhost:1947</a>, и разрешить удаленные подключения на вкладке <a href="http://localhost:1947/_int_/config_from.html">Access from Remote Clients</a>:
 <img src="img/sentinel-hasp-setup-server.png?raw=true" alt="Access from Remote Clients" /></li>
 </ol>
@@ -352,7 +352,7 @@ img {
 <h2>Aladdin HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>475</code> (и UDP и TCP)</li>
-<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (HASP HL Assembly for Microsoft.Net) производителя Aladdin Knowledge Systems Ltd. (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a>, а также библиотека <code>haspenv.dll</code> (HASP HL Envelope Runtime for Microsoft.Net) того же производителя (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a>) </li>
+<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (HASP HL Assembly for Microsoft.Net) производителя Aladdin Knowledge Systems Ltd. (в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a>, а также библиотека <code>haspenv.dll</code> (HASP HL Envelope Runtime for Microsoft.Net) того же производителя (в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a>) </li>
 <li>Настроить файл <code>nethasp.ini</code></li>
 </ol>
 <h3>Настройка nethasp.ini</h3>
@@ -387,7 +387,7 @@ NH_USE_BROADCAST = Disabled
 <h2>Sentinel HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>1947</code> (и UDP и TCP)</li>
-<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (Sentinel LDK Assembly for Microsoft.Net) производителя SafeNet, Inc., а также библиотеки, привязанные к поставщику ПО IServ - <code>apidsp_windows.dll</code>, <code>hasp_windows_82572.dll</code>, <code>haspvlib_82572.dll</code> (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a>)</li>
+<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (Sentinel LDK Assembly for Microsoft.Net) производителя SafeNet, Inc., а также библиотеки, привязанные к поставщику ПО IServ - <code>apidsp_windows.dll</code>, <code>hasp_windows_82572.dll</code>, <code>haspvlib_82572.dll</code> (в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a>)</li>
 </ol>
 <p>Если в локальной сети запрещены широковещательные запросы и/или машина с ключом находится в другой подсети, чем машина пользователя, необходимо</p>
 <ol>
@@ -450,7 +450,8 @@ NH_USE_BROADCAST = Disabled
 <p>При запуске Aladdin DiagnostiX необходимо указать адрес машины с ключом:
 <img src="img/diagnostix-nethasp.png?raw=true" alt="Aladdin DiagnostiX nethasp.ini" /></p>
 <p>файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - <code>\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc</code>) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
-<img src="img/diagnostix-check.png?raw=true" alt="Aladdin DiagnostiX Check" />  </p>
+<img src="img/diagnostix-check.png?raw=true" alt="Aladdin DiagnostiX Check" />  
+</p>
 <h3>Sentinel HASP</h3>
 <p>В случае с Sentinel HASP количество активных подключений отображается в консоли управления Sentinel Admin Control Center (<a href="http://localhost:1947">http://localhost:1947</a>) на вкладке <a href="http://localhost:1947/_int_/devices.html">Sentinel Keys</a>:
 <img src="img/sentinel-client-sessions.png?raw=true" alt="Sentinel Keys Sessions" /></p>
@@ -460,7 +461,8 @@ NH_USE_BROADCAST = Disabled
 <ul>
 <li>из 10 лицензий Ядра EE+PE (Feature 3) использовано 4 (т.е. запущено 4 экземпляра клиентского приложения OmnisEE/OmnisPE, собранного в конфигурации SetupHaspExt)</li>
 <li>из 10 лицензий ядра Omnis EE (Feature 1) использовано 2 (т.е. запущено 2 экземпляра приложения OmnisEE.exe, собранного в конфигурации SetupHasp)</li>
-<li>из 10 лицензий ядра Omnis PE (Feature 2) использована 1 (т.е. запущен 1 экземпляр приложения OmnisPE.exe, собранного в конфигурации SetupHasp)  </li>
+<li>из 10 лицензий ядра Omnis PE (Feature 2) использована 1 (т.е. запущен 1 экземпляр приложения OmnisPE.exe, собранного в конфигурации SetupHasp)  
+</li>
 </ul>
 <h3>Решение проблемы недоступности ключа</h3>
 <ol>
@@ -469,9 +471,10 @@ NH_USE_BROADCAST = Disabled
 <li>Разрешить соединения по UDP и TCP портам 475 (Aladdin HASP) или 1947 (Sentinel HASP) и на машине с ключом, и на машине пользователя</li>
 <li>В случае с Aladdin HASP проверить, что на машине с ключом запущен HASP License Manager (как служба либо как отдельное приложение), и настройки используемых протоколов совпадают с клиентскими</li>
 <li>В случае с Sentinel HASP проверить, что на машине с ключом разрешены удаленные обращения (вкладка <a href="http://localhost:1947/_int_/config_from.html">Access from Remote Clients</a>) к ключу</li>
-<li>Убедиться, что версия клиентской библиотеки <code>hasp_net_windows.dll</code>, расположенной в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe, совпадает с используемой версией ключа (<a href="file:///\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a> и <a href="file:///\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a> для Aladdin HASP, <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a> для Sentinel HASP)</li>
-<li>В случае с Aladdin HASP проверить настройки в файле конфигурации <code>nethasp.ini</code> в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe (актуальный файл для локальной сети IServ - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20Omnis%20Server\nethasp.ini"><code>\\fs02\Dev_Repository\Builds\Install Omnis Server\nethasp.ini</code></a>)</li>
-<li>В случае с Sentinel HASP проверить в Sentinel Admin Control Center, что адрес машины с ключом указан на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code> и поиск ключей по сети включен (флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;)   </li>
+<li>Убедиться, что версия клиентской библиотеки <code>hasp_net_windows.dll</code>, расположенной в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe, совпадает с используемой версией ключа (<a href="file:///\\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a> и <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a> для Aladdin HASP, <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a> для Sentinel HASP)</li>
+<li>В случае с Aladdin HASP проверить настройки в файле конфигурации <code>nethasp.ini</code> в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe (актуальный файл для локальной сети IServ - <a href="file:///\\\fs02\Dev_Repository\Builds\Install%20Omnis%20Server\nethasp.ini"><code>\\fs02\Dev_Repository\Builds\Install Omnis Server\nethasp.ini</code></a>)</li>
+<li>В случае с Sentinel HASP проверить в Sentinel Admin Control Center, что адрес машины с ключом указан на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code> и поиск ключей по сети включен (флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;)   
+</li>
 </ol>
 <h1>Приложение 1. Лицензируемые функции Omni-US</h1>
 <p>При запуске клиентское приложение в зависимости от конфигурации сборки (SetupHasp или SetupHaspExt) запрашивает лицензию на одну из трёх функций (в скобках - номер Feature):</p>
