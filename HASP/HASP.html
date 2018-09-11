@@ -3,292 +3,15 @@
 <head>
 <title>HASP</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style type="text/css">
-/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
-/* Author: Nicolas Hery - http://nicolashery.com */
-/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
-/* Source: https://github.com/nicolahery/markdownpad-github */
 
-/* RESET
-=============================================================================*/
+    <link rel="stylesheet" href="/OmniUS-Docs/assets/css/style.css?v=7be9d8be399b381272020df3175d5177abe4f101">
+    <script src="/OmniUS-Docs/assets/js/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-/* BODY
-=============================================================================*/
-
-body {
-  font-family: Helvetica, arial, freesans, clean, sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  padding: 20px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-body>*:first-child {
-  margin-top: 0 !important;
-}
-
-body>*:last-child {
-  margin-bottom: 0 !important;
-}
-
-/* BLOCKS
-=============================================================================*/
-
-p, blockquote, ul, ol, dl, table, pre {
-  margin: 15px 0;
-}
-
-/* HEADERS
-=============================================================================*/
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 20px 0 10px;
-  padding: 0;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
-  font-size: inherit;
-}
-
-h1 {
-  font-size: 28px;
-  color: #000;
-}
-
-h2 {
-  font-size: 24px;
-  border-bottom: 1px solid #ccc;
-  color: #000;
-}
-
-h3 {
-  font-size: 18px;
-}
-
-h4 {
-  font-size: 16px;
-}
-
-h5 {
-  font-size: 14px;
-}
-
-h6 {
-  color: #777;
-  font-size: 14px;
-}
-
-body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
-  margin-top: 10px;
-}
-
-/* LINKS
-=============================================================================*/
-
-a {
-  color: #4183C4;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* LISTS
-=============================================================================*/
-
-ul, ol {
-  padding-left: 30px;
-}
-
-ul li > :first-child, 
-ol li > :first-child, 
-ul li ul:first-of-type, 
-ol li ol:first-of-type, 
-ul li ol:first-of-type, 
-ol li ul:first-of-type {
-  margin-top: 0px;
-}
-
-ul ul, ul ol, ol ol, ol ul {
-  margin-bottom: 0;
-}
-
-dl {
-  padding: 0;
-}
-
-dl dt {
-  font-size: 14px;
-  font-weight: bold;
-  font-style: italic;
-  padding: 0;
-  margin: 15px 0 5px;
-}
-
-dl dt:first-child {
-  padding: 0;
-}
-
-dl dt>:first-child {
-  margin-top: 0px;
-}
-
-dl dt>:last-child {
-  margin-bottom: 0px;
-}
-
-dl dd {
-  margin: 0 0 15px;
-  padding: 0 15px;
-}
-
-dl dd>:first-child {
-  margin-top: 0px;
-}
-
-dl dd>:last-child {
-  margin-bottom: 0px;
-}
-
-/* CODE
-=============================================================================*/
-
-pre, code, tt {
-  font-size: 12px;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
-}
-
-code, tt {
-  margin: 0 0px;
-  padding: 0px 0px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px;
-}
-
-pre>code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent;
-}
-
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px;
-}
-
-pre code, pre tt {
-  background-color: transparent;
-  border: none;
-}
-
-kbd {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    background-color: #DDDDDD;
-    background-image: linear-gradient(#F1F1F1, #DDDDDD);
-    background-repeat: repeat-x;
-    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
-    border-image: none;
-    border-radius: 2px 2px 2px 2px;
-    border-style: solid;
-    border-width: 1px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    line-height: 10px;
-    padding: 1px 4px;
-}
-
-/* QUOTES
-=============================================================================*/
-
-blockquote {
-  border-left: 4px solid #DDD;
-  padding: 0 15px;
-  color: #777;
-}
-
-blockquote>:first-child {
-  margin-top: 0px;
-}
-
-blockquote>:last-child {
-  margin-bottom: 0px;
-}
-
-/* HORIZONTAL RULES
-=============================================================================*/
-
-hr {
-  clear: both;
-  margin: 15px 0;
-  height: 0px;
-  overflow: hidden;
-  border: none;
-  background: transparent;
-  border-bottom: 4px solid #ddd;
-  padding: 0;
-}
-
-/* TABLES
-=============================================================================*/
-
-table th {
-  font-weight: bold;
-}
-
-table th, table td {
-  border: 1px solid #ccc;
-  padding: 6px 13px;
-}
-
-table tr {
-  border-top: 1px solid #ccc;
-  background-color: #fff;
-}
-
-table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-
-/* IMAGES
-=============================================================================*/
-
-img {
-  max-width: 100%
-}
-</style>
 </head>
 <body>
 <h1>Использование HASP в АИС Omni-US</h1>
@@ -335,13 +58,13 @@ img {
 <h2>Aladdin HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>475</code> (и UDP и TCP)</li>
-<li>Установить драйвер (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, распространяемая с инсталлятором Omnis версия - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\drivers\HASPUserSetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\drivers\HASPUserSetup.exe</code></a>.</li>
-<li>Установить и запустить HASP License Manager (<a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\HASP_LM_setup\lmsetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\HASP_LM_setup\lmsetup.exe</code></a> либо <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589948742">на сайте Sentinel</a>) - специальное приложение Aladdin, осуществляющее обмен данными между USB-ключом и защищенным приложением (далее - <em>HASP LM</em>).</li>
+<li>Установить драйвер (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, распространяемая с инсталлятором Omnis версия - <a href="file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\drivers\HASPUserSetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\drivers\HASPUserSetup.exe</code></a>.</li>
+<li>Установить и запустить HASP License Manager (<a href="file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\HASP_LM_setup\lmsetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\HASP_LM_setup\lmsetup.exe</code></a> либо <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589948742">на сайте Sentinel</a>) - специальное приложение Aladdin, осуществляющее обмен данными между USB-ключом и защищенным приложением (далее - <em>HASP LM</em>).</li>
 </ol>
 <h2>Sentinel HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>1947</code> (и UDP и TCP)</li>
-<li>Установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers!%20New\Sentinel_LDK_Run-time_setup.zip"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers! New\Sentinel_LDK_Run-time_setup.zip</code></a>)</li>
+<li>Установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, в локальной сети - [<code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>](file:///\\\fs02\Dev<em>Repository\Builds\Install HASP drivers! New\Sentinel</em>LDK<em>Run-time</em>setup.zip))</li>
 <li>Запустить консоль управления Sentinel Admin Control Center, перейдя в браузере по адресу <a href="http://localhost:1947">http://localhost:1947</a>, и разрешить удаленные подключения на вкладке <a href="http://localhost:1947/_int_/config_from.html">Access from Remote Clients</a>:
 <img src="img/sentinel-hasp-setup-server.png?raw=true" alt="Access from Remote Clients" /></li>
 </ol>
@@ -352,7 +75,7 @@ img {
 <h2>Aladdin HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>475</code> (и UDP и TCP)</li>
-<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (HASP HL Assembly for Microsoft.Net) производителя Aladdin Knowledge Systems Ltd. (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a>, а также библиотека <code>haspenv.dll</code> (HASP HL Envelope Runtime for Microsoft.Net) того же производителя (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a>) </li>
+<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (HASP HL Assembly for Microsoft.Net) производителя Aladdin Knowledge Systems Ltd. (в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a>, а также библиотека <code>haspenv.dll</code> (HASP HL Envelope Runtime for Microsoft.Net) того же производителя (в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a>) </li>
 <li>Настроить файл <code>nethasp.ini</code></li>
 </ol>
 <h3>Настройка nethasp.ini</h3>
@@ -387,11 +110,11 @@ NH_USE_BROADCAST = Disabled
 <h2>Sentinel HASP</h2>
 <ol>
 <li>Разрешить соединения по порту <code>1947</code> (и UDP и TCP)</li>
-<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (Sentinel LDK Assembly for Microsoft.Net) производителя SafeNet, Inc., а также библиотеки, привязанные к поставщику ПО IServ - <code>apidsp_windows.dll</code>, <code>hasp_windows_82572.dll</code>, <code>haspvlib_82572.dll</code> (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a>)</li>
+<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (Sentinel LDK Assembly for Microsoft.Net) производителя SafeNet, Inc., а также библиотеки, привязанные к поставщику ПО IServ - <code>apidsp_windows.dll</code>, <code>hasp_windows_82572.dll</code>, <code>haspvlib_82572.dll</code> (в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a>)</li>
 </ol>
 <p>Если в локальной сети запрещены широковещательные запросы и/или машина с ключом находится в другой подсети, чем машина пользователя, необходимо</p>
 <ol>
-<li>установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&amp;c=End+User&amp;p=Sentinel+HASP&amp;o=Windows&amp;t=Runtime+%26+Device+Driver&amp;l=all">на сайте Sentinel</a>, в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers!%20New\Sentinel_LDK_Run-time_setup.zip"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers! New\Sentinel_LDK_Run-time_setup.zip</code></a>)</li>
+<li>установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&amp;c=End+User&amp;p=Sentinel+HASP&amp;o=Windows&amp;t=Runtime+%26+Device+Driver&amp;l=all">на сайте Sentinel</a>, в локальной сети - <code>\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>)</li>
 <li>запустить на пользовательской машине консоль управления Sentinel Admin Control Center перейдя в браузере по адресу <a href="http://localhost:1947">http://localhost:1947</a></li>
 <li>Указать адрес &quot;HASP-сервера&quot; на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code>:
 <img src="img/sentinel-hasp-setup-client.png?raw=true" alt="Access to Remote License Managers" />, отключить широковещательные запросы (снять флаг &quot;<code>Broadcast Search for Remote Licenses</code>&quot;), если broadcast пакеты не обрабатываются; разрешить поиск ключей по сети (включить флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;), если он по какой-либо причине ещё не разрешен.</li>
@@ -446,11 +169,12 @@ NH_USE_BROADCAST = Disabled
 <h2>Ключ HASP HL недоступен</h2>
 <p>Сообщение &quot;Ключ HASP HL недоступен или превышено количество пользователей в системе&quot; отображается в случае, когда ключ недоступен, либо доступен, но количество пользователей, уже &quot;занявших&quot; лицензию Omnis, действительно достигло лицензированного предела.</p>
 <h3>Aladdin HASP</h3>
-<p>В случае с Aladdin HASP доступность ключа и количество активных подключений можно увидеть с помощью утилиты Aladdin DiagnostiX (<a href="http://safenet-sentinel.ru/files/diagnostix_installer.zip">http://safenet-sentinel.ru/files/diagnostix_installer.zip</a>, в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-old\DiagnostiX_Installer.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-old\DiagnostiX_Installer.zip</code></a>).</p>
+<p>В случае с Aladdin HASP доступность ключа и количество активных подключений можно увидеть с помощью утилиты Aladdin DiagnostiX (<a href="http://safenet-sentinel.ru/files/diagnostix_installer.zip">http://safenet-sentinel.ru/files/diagnostix_installer.zip</a>, в локальной сети ).</p>
 <p>При запуске Aladdin DiagnostiX необходимо указать адрес машины с ключом:
 <img src="img/diagnostix-nethasp.png?raw=true" alt="Aladdin DiagnostiX nethasp.ini" /></p>
-<p>файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc</code></a>) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
-<img src="img/diagnostix-check.png?raw=true" alt="Aladdin DiagnostiX Check" />  </p>
+<p>файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - <code>\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc</code>) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
+<img src="img/diagnostix-check.png?raw=true" alt="Aladdin DiagnostiX Check" />  
+</p>
 <h3>Sentinel HASP</h3>
 <p>В случае с Sentinel HASP количество активных подключений отображается в консоли управления Sentinel Admin Control Center (<a href="http://localhost:1947">http://localhost:1947</a>) на вкладке <a href="http://localhost:1947/_int_/devices.html">Sentinel Keys</a>:
 <img src="img/sentinel-client-sessions.png?raw=true" alt="Sentinel Keys Sessions" /></p>
@@ -460,7 +184,8 @@ NH_USE_BROADCAST = Disabled
 <ul>
 <li>из 10 лицензий Ядра EE+PE (Feature 3) использовано 4 (т.е. запущено 4 экземпляра клиентского приложения OmnisEE/OmnisPE, собранного в конфигурации SetupHaspExt)</li>
 <li>из 10 лицензий ядра Omnis EE (Feature 1) использовано 2 (т.е. запущено 2 экземпляра приложения OmnisEE.exe, собранного в конфигурации SetupHasp)</li>
-<li>из 10 лицензий ядра Omnis PE (Feature 2) использована 1 (т.е. запущен 1 экземпляр приложения OmnisPE.exe, собранного в конфигурации SetupHasp)  </li>
+<li>из 10 лицензий ядра Omnis PE (Feature 2) использована 1 (т.е. запущен 1 экземпляр приложения OmnisPE.exe, собранного в конфигурации SetupHasp)  
+</li>
 </ul>
 <h3>Решение проблемы недоступности ключа</h3>
 <ol>
@@ -469,9 +194,10 @@ NH_USE_BROADCAST = Disabled
 <li>Разрешить соединения по UDP и TCP портам 475 (Aladdin HASP) или 1947 (Sentinel HASP) и на машине с ключом, и на машине пользователя</li>
 <li>В случае с Aladdin HASP проверить, что на машине с ключом запущен HASP License Manager (как служба либо как отдельное приложение), и настройки используемых протоколов совпадают с клиентскими</li>
 <li>В случае с Sentinel HASP проверить, что на машине с ключом разрешены удаленные обращения (вкладка <a href="http://localhost:1947/_int_/config_from.html">Access from Remote Clients</a>) к ключу</li>
-<li>Убедиться, что версия клиентской библиотеки <code>hasp_net_windows.dll</code>, расположенной в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe, совпадает с используемой версией ключа (<a href="file:///\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a> и <a href="file:///\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a> для Aladdin HASP, <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a> для Sentinel HASP)</li>
-<li>В случае с Aladdin HASP проверить настройки в файле конфигурации <code>nethasp.ini</code> в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe (актуальный файл для локальной сети IServ - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20Omnis%20Server\nethasp.ini"><code>\\fs02\Dev_Repository\Builds\Install Omnis Server\nethasp.ini</code></a>)</li>
-<li>В случае с Sentinel HASP проверить в Sentinel Admin Control Center, что адрес машины с ключом указан на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code> и поиск ключей по сети включен (флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;)   </li>
+<li>Убедиться, что версия клиентской библиотеки <code>hasp_net_windows.dll</code>, расположенной в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe, совпадает с используемой версией ключа (<a href="file:///\\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a> и <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a> для Aladdin HASP, <a href="file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a> для Sentinel HASP)</li>
+<li>В случае с Aladdin HASP проверить настройки в файле конфигурации <code>nethasp.ini</code> в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe (актуальный файл для локальной сети IServ - <a href="file:///\\\fs02\Dev_Repository\Builds\Install%20Omnis%20Server\nethasp.ini"><code>\\fs02\Dev_Repository\Builds\Install Omnis Server\nethasp.ini</code></a>)</li>
+<li>В случае с Sentinel HASP проверить в Sentinel Admin Control Center, что адрес машины с ключом указан на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code> и поиск ключей по сети включен (флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;)   
+</li>
 </ol>
 <h1>Приложение 1. Лицензируемые функции Omni-US</h1>
 <p>При запуске клиентское приложение в зависимости от конфигурации сборки (SetupHasp или SetupHaspExt) запрашивает лицензию на одну из трёх функций (в скобках - номер Feature):</p>
