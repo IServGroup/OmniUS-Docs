@@ -52,7 +52,7 @@
 
 ## Sentinel HASP ##
 1. Разрешить соединения по порту `1947` (и UDP и TCP)
-2. Установить драйвер Sentinel HASP Run time Environment (актуальная версия - [на сайте Sentinel по состоянию на 11.09.2018](https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119), в локальной сети - [`\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip`](file:///\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip))
+2. Установить драйвер Sentinel HASP Run time Environment (актуальная версия - [на сайте Sentinel по состоянию на 11.09.2018](https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119), в локальной сети - [`\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip`](file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\!%20New\Sentinel_LDK_Run-time_setup.zip))
 3. Запустить консоль управления Sentinel Admin Control Center, перейдя в браузере по адресу [http://localhost:1947](http://localhost:1947), и разрешить удаленные подключения на вкладке [Access from Remote Clients](http://localhost:1947/_int_/config_from.html):
 ![Access from Remote Clients](img/sentinel-hasp-setup-server.png?raw=true)
 
@@ -105,7 +105,7 @@
 
 Если в локальной сети запрещены широковещательные запросы и/или машина с ключом находится в другой подсети, чем машина пользователя, необходимо
 
-3. установить драйвер Sentinel HASP Run time Environment (актуальная версия - [на сайте Sentinel](https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&c=End+User&p=Sentinel+HASP&o=Windows&t=Runtime+%26+Device+Driver&l=all), в локальной сети - `\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip`)
+3. установить драйвер Sentinel HASP Run time Environment (актуальная версия - [на сайте Sentinel](https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&c=End+User&p=Sentinel+HASP&o=Windows&t=Runtime+%26+Device+Driver&l=all), в локальной сети - [`\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip`](file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\!%20New\Sentinel_LDK_Run-time_setup.zip))
 4. запустить на пользовательской машине консоль управления Sentinel Admin Control Center перейдя в браузере по адресу [http://localhost:1947](http://localhost:1947)
 5. Указать адрес "HASP-сервера" на вкладке [Access to Remote License Managers](http://localhost:1947/_int_/config_to.html) в поле `Remote License Search Parameters`:
 ![Access to Remote License Managers](img/sentinel-hasp-setup-client.png?raw=true), отключить широковещательные запросы (снять флаг "`Broadcast Search for Remote Licenses`"), если broadcast пакеты не обрабатываются; разрешить поиск ключей по сети (включить флаг "`Allow Access to Remote Licenses`"), если он по какой-либо причине ещё не разрешен.
@@ -167,12 +167,12 @@
 Сообщение "Ключ HASP HL недоступен или превышено количество пользователей в системе" отображается в случае, когда ключ недоступен, либо доступен, но количество пользователей, уже "занявших" лицензию Omnis, действительно достигло лицензированного предела.
 
 ### Aladdin HASP ###
-В случае с Aladdin HASP доступность ключа и количество активных подключений можно увидеть с помощью утилиты Aladdin DiagnostiX ([http://safenet-sentinel.ru/files/diagnostix_installer.zip](http://safenet-sentinel.ru/files/diagnostix_installer.zip), в локальной сети ).
+В случае с Aladdin HASP доступность ключа и количество активных подключений можно увидеть с помощью утилиты Aladdin DiagnostiX ([http://safenet-sentinel.ru/files/diagnostix_installer.zip](http://safenet-sentinel.ru/files/diagnostix_installer.zip), в локальной сети - [`\\\fs02\Dev_Repository\Builds\DLL\HASP-old\DiagnostiX_Installer.zip`](file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-old\DiagnostiX_Installer.zip)).
 
 При запуске Aladdin DiagnostiX необходимо указать адрес машины с ключом:
 ![Aladdin DiagnostiX nethasp.ini](img/diagnostix-nethasp.png?raw=true)
 
-файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - `\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc`) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
+файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - [`\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc`](file:///\\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc)) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
 ![Aladdin DiagnostiX Check](img/diagnostix-check.png?raw=true)  
 
 ### Sentinel HASP ###
