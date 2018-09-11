@@ -14,6 +14,8 @@
 
 </head>
 <body>
+    <div class="wrapper">
+
 <h1>Использование HASP в АИС Omni-US</h1>
 <p><code>HASP</code> (англ. Hardware Against Software Piracy) — это мультиплатформенная аппаратно-программная система защиты программ и данных от незаконного использования и несанкционированного распространения, разработанная компанией Aladdin Knowledge Systems Ltd (с 2009 года - часть SafeNet Inc, с 2014 года SafeNet - часть Gemalto).</p>
 <p>Защита HASP включает в себя:</p>
@@ -172,7 +174,7 @@ NH_USE_BROADCAST = Disabled
 <p>В случае с Aladdin HASP доступность ключа и количество активных подключений можно увидеть с помощью утилиты Aladdin DiagnostiX (<a href="http://safenet-sentinel.ru/files/diagnostix_installer.zip">http://safenet-sentinel.ru/files/diagnostix_installer.zip</a>, в локальной сети ).</p>
 <p>При запуске Aladdin DiagnostiX необходимо указать адрес машины с ключом:
 <img src="img/diagnostix-nethasp.png?raw=true" alt="Aladdin DiagnostiX nethasp.ini" /></p>
-<p>файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - <code>\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc</code>) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
+<p>файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc</code></a>) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
 <img src="img/diagnostix-check.png?raw=true" alt="Aladdin DiagnostiX Check" />  
 </p>
 <h3>Sentinel HASP</h3>
@@ -364,6 +366,14 @@ NH_USE_BROADCAST = Disabled
 <li><code>nh_use_broadcast</code> - использовать широковещательный механизм UDP. Возможное значение: <code>enabled</code>, <code>disabled</code>. По умолчанию – <code>enabled</code>.</li>
 </ul>
 
+    <footer>
+    
+      <p>Project maintained by <a href="https://github.com/IServGroup">IServGroup</a></p>
+    
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+
+<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
 </body>
 </html>
-<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
