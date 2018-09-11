@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HASP</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>Использование HASP в АИС Omni-US</h1>
+<p><code>HASP</code> (англ. Hardware Against Software Piracy) — это мультиплатформенная аппаратно-программная система защиты программ и данных от незаконного использования и несанкционированного распространения, разработанная компанией Aladdin Knowledge Systems Ltd (с 2009 года - часть SafeNet Inc, с 2014 года SafeNet - часть Gemalto).</p>
+<p>Защита HASP включает в себя:</p>
+<ul>
+<li>электронный ключ HASP;</li>
+<li>специальное программное обеспечение для «привязки» к электронному ключу, защиты приложений и для шифрования данных;</li>
+<li>схемы и методы защиты программ и данных, обнаружения и борьбы с отладчиками, контроля целостности программного кода и данных.</li>
+</ul>
+<p>Электронные ключи HASP выпускаются в различном виде:</p>
+<ul>
+<li>программный ключ HASP SL</li>
+<li>USB-ключ;</li>
+<li>LPT-ключ с возможностью «прозрачного» подключения других ключей и устройств;</li>
+<li>PCMCIA-карта;</li>
+<li>внутренняя плата стандарта PCI и ISA.</li>
+</ul>
+<p>Для защиты Omni-US от несанкционированного распространения и для контроля соблюдения лицензионных соглашений используются USB-ключи HASP HL как &quot;старых&quot; версий Aladdin HASP HL Net (<em>далее - Aladdin HASP</em>), так и &quot;новых&quot; Sentinel HL Net (<em>далее - Sentinel HASP</em>).</p>
+<p>Начиная с Windows Server 2012, поддержка ключей Aladdin HASP ограничена (доступность USB-ключа, подключенного в машину под управлением этой или более новой ОС, не гарантирована), поэтому с 2016 года IServ использует ключи Sentinel HASP.</p>
+<blockquote>
+<p>С точки зрения конечного пользователя Aladdin HASP и Sentinel HASP отличаются драйверами и инструментами для настройки машин &quot;HASP-сервера&quot; и &quot;HASP-клиентов&quot;, но не применением в повседневной работе.</p>
+</blockquote>
+<p>Ключи Aladdin HASP и Sentinel HASP различаются способом указания кода вендора (производителя защищаемого ПО), поэтому клиентское приложение Omnis при запуске определяет, с какой моделью ключа работать, по версии библиотеки <code>hasp_net_windows.dll</code>, расположенной в каталоге с приложением; ключи разных поколений, выпущенные IServ, не совместимы между собой (несмотря на совместимость с т.зр. обращения к функциям HASP в целом), т.е. Omnis с новыми драйверами Sentinel не &quot;увидит&quot; старый ключ Aladdin HASP и наоборот.</p>
+<p>Вопросы работы с ключами с точки зрения разработчика защищаемого ПО рассмотрены на сайте производителя:</p>
+<ol>
+<li><a href="https://safenet-sentinel.ru/faq/dev/common">База знаний - Общие вопросы для разработчиков</a></li>
+<li><a href="https://safenet-sentinel.ru/faq/dev/hl">FAQ для Aladdin HASP</a></li>
+<li><a href="https://safenet-sentinel.ru/faq/dev/sentinel">FAQ для Sentinel HASP</a>.</li>
+</ol>
+<blockquote>
+<p>В данном документе скриншоты могут отличаться от актуального вида изображенных инструментов без потери смысла</p>
+</blockquote>
+<h2>Функции HASP в Omni-US</h2>
+<p>Клиент Omni-US (для работы с юр.лицами OmnisEE.exe или с физ.лицами OmnisPE.exe) при запуске ищет в локальной сети HASP-ключ со &quot;свободной&quot; лицензией, и, если удалось её &quot;занять&quot;, анализирует, какие разделы системы (в терминологии HASP - &quot;Feature&quot;, например, <em>&quot;(PE) Контрагенты - физ.лица&quot;</em>, <em>&quot;(EE) Отчеты&quot;</em> и т.д., см Приложение 1) лицензированы и должны быть доступны пользователю (нелицензированные скрываются в интерфейсе пользователя). </p>
+<p>Клиентское приложение может быть скомпилировано в трёх вариантах:</p>
+<ol>
+<li>NoHASP-версия - вообще не использует функциональность HASP</li>
+<li>SetupHasp-версия - проверяет наличие свободных лицензий на запуск OmnisEE / OmnisPE (может работать с обоими вариантами ключей - и Aladdin, и Sentinel)</li>
+<li>SetupHaspExt-версия (только для Sentinel HASP) - проверяет наличие свободных лицензий на запуск любого Omni-US, без разделения на EE и PE</li>
+</ol>
+<h1>Настройка машины с ключом</h1>
+<p>На машине, где размещен HASP-ключ защиты, необходимо:</p>
+<h2>Aladdin HASP</h2>
+<ol>
+<li>Разрешить соединения по порту <code>475</code> (и UDP и TCP)</li>
+<li>Установить драйвер (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, распространяемая с инсталлятором Omnis версия - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\drivers\HASPUserSetup.exe"><code>\fs02\Dev_Repository\Builds\Install HASP drivers\drivers\HASPUserSetup.exe</code></a>.</li>
+<li>Установить и запустить HASP License Manager (<a href="file:///\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers\HASP_LM_setup\lmsetup.exe"><code>\\fs02\Dev_Repository\Builds\Install HASP drivers\HASP_LM_setup\lmsetup.exe</code></a> либо <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589948742">на сайте Sentinel</a>) - специальное приложение Aladdin, осуществляющее обмен данными между USB-ключом и защищенным приложением (далее - <em>HASP LM</em>).</li>
+</ol>
+<h2>Sentinel HASP</h2>
+<ol>
+<li>Разрешить соединения по порту <code>1947</code> (и UDP и TCP)</li>
+<li>Установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, в локальной сети - [<code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>](file:///\\fs02\Dev<em>Repository\Builds\Install HASP drivers! New\Sentinel</em>LDK<em>Run-time</em>setup.zip))</li>
+<li>Запустить консоль управления Sentinel Admin Control Center, перейдя в браузере по адресу <a href="http://localhost:1947">http://localhost:1947</a>, и разрешить удаленные подключения на вкладке <a href="http://localhost:1947/_int_/config_from.html">Access from Remote Clients</a>:
+<img src="img/sentinel-hasp-setup-server.png?raw=true" alt="Access from Remote Clients" /></li>
+</ol>
+<h2>Дополнительно</h2>
+<p>Для работы ключей Aladdin HASP по сети в любом случае необходим запуск HASP License Manager, но драйвер может быть использован и современный (Sentinel HASP Run time Environment), т.к. он успешно обеспечивает работу USB-ключа как устройства HASP.</p>
+<p>Таким образом, на одной машине с одним драйвером могут одновременно работать оба вида ключей.</p>
+<h1>Настройка пользовательской машины</h1>
+<h2>Aladdin HASP</h2>
+<ol>
+<li>Разрешить соединения по порту <code>475</code> (и UDP и TCP)</li>
+<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (HASP HL Assembly for Microsoft.Net) производителя Aladdin Knowledge Systems Ltd. (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a>, а также библиотека <code>haspenv.dll</code> (HASP HL Envelope Runtime for Microsoft.Net) того же производителя (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a>) </li>
+<li>Настроить файл <code>nethasp.ini</code></li>
+</ol>
+<h3>Настройка nethasp.ini</h3>
+<p>В файле конфигурации клиента Aladdin HASP настраивается процесс поиска клиентом экземпляра HASP License Manager.</p>
+<p>Клиентское приложение при старте ищет файл конфигурации в следующем порядке каталогов:</p>
+<ul>
+<li>директория, где находится исполняемый файл</li>
+<li>текущая директория</li>
+<li>системная директория Windows</li>
+<li>директория Windows</li>
+</ul>
+<p>Если файл конфигурации не найден, используется поиск HASP LM широковещательными запросами.</p>
+<p>Для работы клиента Omni-US минимально достаточен следующий набор настроек в файле конфигурации:</p>
+<pre><code>[NH_COMMON]
+NH_TCPIP = Enabled
+NH_IPX = Disabled
+[NH_TCPIP]
+NH_SERVER_ADDR = 192.168.17.100
+NH_USE_BROADCAST = Disabled
+</code></pre>
+
+<p>где</p>
+<ul>
+<li><code>[NH_COMMON]</code> - раздел общих настроек</li>
+<li><code>NH_TCPIP = Enabled</code> - включение протокола TCP/IP</li>
+<li><code>NH_IPX = Disabled</code> - отключение проткола IPX</li>
+<li><code>[NH_TCPIP]</code> - раздел настроек для протокола TCP/IP</li>
+<li><code>NH_SERVER_ADDR = 192.168.17.100</code> - адрес машины с HASP LM (может быть указан как IP-адрес, так и имя машины) </li>
+<li><code>NH_USE_BROADCAST = Disabled</code> - отключение широковещательных запросов поиска HASP LM</li>
+</ul>
+<p>Подробные сведения о конфигурационном файле приведены в Приложении 2.</p>
+<h2>Sentinel HASP</h2>
+<ol>
+<li>Разрешить соединения по порту <code>1947</code> (и UDP и TCP)</li>
+<li>Убедиться, что рядом с исполняемым файлом OmnisEE.exe / OmnisPE.exe расположена клиентская библиотека HASP <code>hasp_net_windows.dll</code> (Sentinel LDK Assembly for Microsoft.Net) производителя SafeNet, Inc., а также библиотеки, привязанные к поставщику ПО IServ - <code>apidsp_windows.dll</code>, <code>hasp_windows_82572.dll</code>, <code>haspvlib_82572.dll</code> (в локальной сети - <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a>)</li>
+</ol>
+<p>Если в локальной сети запрещены широковещательные запросы и/или машина с ключом находится в другой подсети, чем машина пользователя, необходимо</p>
+<ol>
+<li>установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&amp;c=End+User&amp;p=Sentinel+HASP&amp;o=Windows&amp;t=Runtime+%26+Device+Driver&amp;l=all">на сайте Sentinel</a>, в локальной сети - <code>\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>)</li>
+<li>запустить на пользовательской машине консоль управления Sentinel Admin Control Center перейдя в браузере по адресу <a href="http://localhost:1947">http://localhost:1947</a></li>
+<li>Указать адрес &quot;HASP-сервера&quot; на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code>:
+<img src="img/sentinel-hasp-setup-client.png?raw=true" alt="Access to Remote License Managers" />, отключить широковещательные запросы (снять флаг &quot;<code>Broadcast Search for Remote Licenses</code>&quot;), если broadcast пакеты не обрабатываются; разрешить поиск ключей по сети (включить флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;), если он по какой-либо причине ещё не разрешен.</li>
+</ol>
+<h1>Запись USB-ключа HASP</h1>
+<p>Запись лицензируемых параметров на USB-ключ осуществляется IServ либо непосредственно на ключ при наличии физического доступа к нему, либо в специальный файл *.V2C, который заказчик Omni-US самостоятельно применяет к ключу.</p>
+<p>Для записи помимо специального ПО необходим &quot;мастер-ключ&quot; (содержит уникальные
+коды и идентификаторы, которые присваиваются IServ как вендору - производителю ПО - компанией SafeNet; записывается поставщиком ООО &quot;АМ Софт&quot;):</p>
+<ul>
+<li>белый с надписью &quot;MASTER HASP HL&quot; для Aladdin HASP</li>
+<li>синий с надписью &quot;Sentinel LDK Master&quot; и наклейкой &quot;Master 4.27 EDQOT 04.16&quot; на обратной стороне для Sentinel HASP</li>
+</ul>
+<p>Коды IServ как вендора (подробнее понятие раскрывается <a href="https://safenet-sentinel.ru/faq/dev/common#6395">в FAQ на сайте Sentinel</a>):</p>
+<ul>
+<li><code>82572</code></li>
+<li><code>EDQOT</code></li>
+</ul>
+<p>Также от заказчика ключа необходимы сведения о лицензионных ограничениях (если есть): доступные функции Omni-US (см список в Приложении 1) и допустимое количество одновременно запущенных копий приложения.</p>
+<h2>Aladdin HASP</h2>
+<p>Для записи ключа Aladdin HASP нужны:</p>
+<ol>
+<li>Белый мастер-ключ</li>
+<li>Утилита Factory из состава <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589943837">Sentinel HASP SDK</a> </li>
+</ol>
+<h2>Sentinel HASP</h2>
+<p>Для записи ключа Sentinel HASP нужны:</p>
+<ol>
+<li>Синий мастер-ключ</li>
+<li>Sentinel EMS (Entitlement Management System) из состава <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947463">Sentinel LDK SDK </a></li>
+<li><a href="https://safenet-sentinel.ru/files/sentinel_ldk_manual_ru.pdf">Руководство по использованию Sentinel EMS</a></li>
+</ol>
+<h1>Известные экземпляры ключей</h1>
+<p>В настоящее время в локальной сети IServ доступны следующие ключи:</p>
+<ol>
+<li><code>hasp-omnius.compulink.local</code> - Aladdin HASP, серийный номер <code>1933557596</code>, 50 лицензий OmnisEE, 50 лицензий OmnisPE</li>
+<li><code>pc-008.compulink.local</code> - Sentinel HASP, серийный номер <code>457132273</code>, 10 лицензий Omnis (<em>для OmnisEE.exe/OmnisPE.exe, собранных в конфигурации SetupHaspExt</em>), 10 лицензий OmnisEE, 10 лицензий OmnisPE</li>
+<li><code>hasp-omnius.compulink.local</code> - Sentinel HASP, серийный номер <code>724415323</code>, безлимитные лицензии Omnis (<em>для OmnisEE.exe/OmnisPE.exe, собранных в конфигурации SetupHaspExt</em>), OmnisEE, OmnisPE</li>
+</ol>
+<h1>Решение проблем</h1>
+<p>С точки зрения пользователя проблема с HASP выражается в сообщении об ошибке при запуске клиентского приложения Omni-US, основные рассмотрены в данном документе:</p>
+<ul>
+<li>&quot;Запрошенная функция недоступна&quot;</li>
+<li>&quot;Ключ HASP HL недоступен или превышено количество пользователей в системе&quot;</li>
+</ul>
+<h2>Запрошенная функция недоступна</h2>
+<p>Сообщение &quot;Запрошенная функция недоступна&quot; отображается в случаях, когда HASP-ключ Omni-US доступен на пользовательской машине, но:</p>
+<ul>
+<li>либо в ключе прописаны лицензии на запуск ядра OmnisEE (Feature 1) и/или ядра OmnisPE (Feature 2), а клиент (собранный в конфигурации SetupHaspExt) запрашивает лицензию на запуск ядра EE+PE (Feature 3), которая в ключе не прописана</li>
+<li>либо в ключе прописана лицензия на запуск ядра EE+PE (Feature 3), а клиент OmnisEE.exe или OmnisPE.exe (собранный в конфигурации SetupHasp) запрашивает лицензию на запуск ядра OmnisEE или OmnisPE соответственно, которая в ключе не прописана</li>
+</ul>
+<p>Вопрос решается настройкой доступа к подходящему ключу HASP, если он есть, либо записью правильного ключа HASP, либо сборкой клиентского приложения в правильной конфигурации (SetupHasp или SetupHaspExt) в зависимости от действующего с потребителем лицензионного договора.</p>
+<h2>Ключ HASP HL недоступен</h2>
+<p>Сообщение &quot;Ключ HASP HL недоступен или превышено количество пользователей в системе&quot; отображается в случае, когда ключ недоступен, либо доступен, но количество пользователей, уже &quot;занявших&quot; лицензию Omnis, действительно достигло лицензированного предела.</p>
+<h3>Aladdin HASP</h3>
+<p>В случае с Aladdin HASP доступность ключа и количество активных подключений можно увидеть с помощью утилиты Aladdin DiagnostiX (<a href="http://safenet-sentinel.ru/files/diagnostix_installer.zip">http://safenet-sentinel.ru/files/diagnostix_installer.zip</a>, в локальной сети ).</p>
+<p>При запуске Aladdin DiagnostiX необходимо указать адрес машины с ключом:
+<img src="img/diagnostix-nethasp.png?raw=true" alt="Aladdin DiagnostiX nethasp.ini" /></p>
+<p>файл с информацией о вендоре (производителе ПО) IServ (в локальной сети - <code>\\fs02\Dev_Repository\Builds\DLL\HASP-old\EDQOT-Aladdin.hvc</code>) и номер (Program Number) запрашиваемой функции (Feature). Если лицензия с заданными параметрами доступна, отобразится информация об общем количестве доступных подключений и о текущем использованном количестве:
+<img src="img/diagnostix-check.png?raw=true" alt="Aladdin DiagnostiX Check" />  </p>
+<h3>Sentinel HASP</h3>
+<p>В случае с Sentinel HASP количество активных подключений отображается в консоли управления Sentinel Admin Control Center (<a href="http://localhost:1947">http://localhost:1947</a>) на вкладке <a href="http://localhost:1947/_int_/devices.html">Sentinel Keys</a>:
+<img src="img/sentinel-client-sessions.png?raw=true" alt="Sentinel Keys Sessions" /></p>
+<p>Для просмотра доступных на данной машине функций (Feature) Omni-US необходимо перейти на вкладку <a href="http://localhost:1947/_int_/features.html">Features</a>:
+<img src="img/sentinel-client-features.png?raw=true" alt="Features" /></p>
+<p>На приведенном скриншоте видны функции №№1, 2, 3, прописанные на USB-ключе, размещенном на машине PC-008, причем:</p>
+<ul>
+<li>из 10 лицензий Ядра EE+PE (Feature 3) использовано 4 (т.е. запущено 4 экземпляра клиентского приложения OmnisEE/OmnisPE, собранного в конфигурации SetupHaspExt)</li>
+<li>из 10 лицензий ядра Omnis EE (Feature 1) использовано 2 (т.е. запущено 2 экземпляра приложения OmnisEE.exe, собранного в конфигурации SetupHasp)</li>
+<li>из 10 лицензий ядра Omnis PE (Feature 2) использована 1 (т.е. запущен 1 экземпляр приложения OmnisPE.exe, собранного в конфигурации SetupHasp)  </li>
+</ul>
+<h3>Решение проблемы недоступности ключа</h3>
+<ol>
+<li>Проверить, что на машине, где физически размещён ключ, установлены драйвера HASP соответствующей версии</li>
+<li>Убедиться, что HASP-ключ доступен локально на машине, где он размещён (с помощью Aladdin DiagnostiX либо Sentinel Admin Control Center)</li>
+<li>Разрешить соединения по UDP и TCP портам 475 (Aladdin HASP) или 1947 (Sentinel HASP) и на машине с ключом, и на машине пользователя</li>
+<li>В случае с Aladdin HASP проверить, что на машине с ключом запущен HASP License Manager (как служба либо как отдельное приложение), и настройки используемых протоколов совпадают с клиентскими</li>
+<li>В случае с Sentinel HASP проверить, что на машине с ключом разрешены удаленные обращения (вкладка <a href="http://localhost:1947/_int_/config_from.html">Access from Remote Clients</a>) к ключу</li>
+<li>Убедиться, что версия клиентской библиотеки <code>hasp_net_windows.dll</code>, расположенной в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe, совпадает с используемой версией ключа (<a href="file:///\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll"><code>\\fs02\Dev_Repository\Builds\DLL\hasp_net_windows.dll</code></a> и <a href="file:///\\fs02\Dev_Repository\Builds\DLL\haspenv.dll"><code>\\fs02\Dev_Repository\Builds\DLL\haspenv.dll</code></a> для Aladdin HASP, <a href="file:///\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip"><code>\\fs02\Dev_Repository\Builds\DLL\HASP-new\new-hasp-dlls.zip</code></a> для Sentinel HASP)</li>
+<li>В случае с Aladdin HASP проверить настройки в файле конфигурации <code>nethasp.ini</code> в каталоге с запускаемым клиентским приложением OmnisEE.exe/OmnisPE.exe (актуальный файл для локальной сети IServ - <a href="file:///\\fs02\Dev_Repository\Builds\Install%20Omnis%20Server\nethasp.ini"><code>\\fs02\Dev_Repository\Builds\Install Omnis Server\nethasp.ini</code></a>)</li>
+<li>В случае с Sentinel HASP проверить в Sentinel Admin Control Center, что адрес машины с ключом указан на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code> и поиск ключей по сети включен (флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;)   </li>
+</ol>
+<h1>Приложение 1. Лицензируемые функции Omni-US</h1>
+<p>При запуске клиентское приложение в зависимости от конфигурации сборки (SetupHasp или SetupHaspExt) запрашивает лицензию на одну из трёх функций (в скобках - номер Feature):</p>
+<ol>
+<li>Ядро программы Omnis EE (1)</li>
+<li>Ядро программы Omnis PE (2)</li>
+<li>Ядро EE+PE (3)</li>
+</ol>
+<p>Затем главное меню клиентского приложения может быть ограничено в зависимости от наличия доступных лицензий на следующие разделы (в скобках - номер Feature):</p>
+<ul>
+<li>(PE) Контрагенты физ.лица (5)</li>
+<li>(PE) Контрагенты юр.лица (6)</li>
+<li>(PE) Агенты (7)</li>
+<li>(PE) Лиц. сч. клиентов\Реквизиты (9)</li>
+<li>(PE) Лиц. сч. клиентов\Услуги (10)</li>
+<li>(PE) Лиц. сч. клиентов\Персональный учет (11)</li>
+<li>(PE) Лиц. сч. клиентов\Счета (12)</li>
+<li>(PE) Лиц. сч. клиентов\Оплаты (13)</li>
+<li>(PE) Лиц. сч. поставщиков\Реквизиты (17)</li>
+<li>(PE) Лиц. сч. поставщиков\Технический учет (18)</li>
+<li>(PE) Лиц. сч. поставщиков\Услуги (19)</li>
+<li>(PE) Лиц. сч. поставщиков\Счета (20)</li>
+<li>(PE) Лиц. сч. поставщиков\Оплаты (21)</li>
+<li>(PE) Лиц. сч. поставщиков\Доп.\Документы (22)</li>
+<li>(PE) Лиц. сч. поставщиков\Доп.\Задолженности (23)</li>
+<li>(PE) Питающая схема (24)</li>
+<li>(PE) Коммунальные объекты (25)</li>
+<li>(PE) Установка приборов учета (26)</li>
+<li>(PE) События персонального учета (27)</li>
+<li>(PE) Квартирный фонд (28)</li>
+<li>(PE) Реестры начислений (29)</li>
+<li>(PE) Начисления (30)</li>
+<li>(PE) Реестры вх.платежей (31)</li>
+<li>(PE) Невыясненные суммы (32)</li>
+<li>(PE) Вх. платежи (33)</li>
+<li>(PE) Начисления поставщиков (34)</li>
+<li>(PE) Исх. платежи (35)</li>
+<li>(PE) Состояние расчетов с абонентами (36)</li>
+<li>(PE) Дебиторы-Кредиторы (37)</li>
+<li>(PE) Обороты по номенклатурам (38)</li>
+<li>(PE) Документы на отключение услуг (39)</li>
+<li>(PE) Журнал задолженности (40)</li>
+<li>(PE) Журнал проводок (41)</li>
+<li>(PE) Акты съема показаний (42)</li>
+<li>(PE) Актовые суммы (43)</li>
+<li>(PE) Входящие документы (Документооборот) (44)</li>
+<li>(PE) Исходящие документы (Документооборот) (45)</li>
+<li>(PE) Журнал операций (46)</li>
+<li>(PE) Выполнить расчет (47)</li>
+<li>(PE) Разнести документы (48)</li>
+<li>(PE) Удалить разноски (49)</li>
+<li>(PE) Подвести итог за период (50)</li>
+<li>(PE) Проведение документов (51)</li>
+<li>(PE) Фактурирование платежей (52)</li>
+<li>(PE) Расчет с поставщиками (53)</li>
+<li>(PE) Отчеты (54)</li>
+<li>(PE) Справочники (55)</li>
+<li>(PE) Настройка сбытовой организации (56)</li>
+<li>(PE) Администрирование (57)</li>
+<li>(PE) Настройка отчетов (58)</li>
+<li>(PE) Настройка невыясненных сумм (59)</li>
+<li>(PE) Финансы (60)</li>
+<li>(EE) Контрагенты физ.лица (62)</li>
+<li>(EE) Контрагенты юр.лица (63)</li>
+<li>(EE) Агенты (64)</li>
+<li>(EE) Лиц. сч. клиентов\Реквизиты (65)</li>
+<li>(EE) Лиц. сч. клиентов\Услуги (66)</li>
+<li>(EE) Лиц. сч. клиентов\Технический учет (67)</li>
+<li>(EE) Лиц. сч. клиентов\Профили нагрузок (68)</li>
+<li>(EE) Лиц. сч. клиентов\Доп.\Документы (69)</li>
+<li>(EE) Лиц. сч. клиентов\Доп.\Не рассчит. периоды (70)</li>
+<li>(EE) Лиц. сч. клиентов\Доп.\Задолженности (71)</li>
+<li>(EE) Лиц. сч. поставщиков\Реквизиты (72)</li>
+<li>(EE) Лиц. сч. поставщиков\Технический учет (73)</li>
+<li>(EE) Лиц. сч. поставщиков\Услуги (74)</li>
+<li>(EE) Лиц. сч. поставщиков\Счета (75)</li>
+<li>(EE) Лиц. сч. поставщиков\Оплаты (76)</li>
+<li>(EE) Лиц. сч. поставщиков\Доп.\Документы (77)</li>
+<li>(EE) Лиц. сч. поставщиков\Доп.\Задолженности (78)</li>
+<li>(EE) Питающая схема (79)</li>
+<li>(EE) Коммунальные объекты (80)</li>
+<li>(EE) Установка приборов учета (81)</li>
+<li>(EE) Реестры начислений (82)</li>
+<li>(EE) Начисления (83)</li>
+<li>(EE) Реестры вх.платежей (84)</li>
+<li>(EE) Невыясненные суммы (85)</li>
+<li>(EE) Вх. платежи (86)</li>
+<li>(EE) Состояние расчетов с абонентами (87)</li>
+<li>(EE) Дебиторы-Кредиторы (88)</li>
+<li>(EE) Журнал задолженности (89)</li>
+<li>(EE) Журнал проводок (90)</li>
+<li>(EE) Акты съема показаний (91)</li>
+<li>(EE) Профили нагрузок (92)</li>
+<li>(EE) Актовые суммы (93)</li>
+<li>(EE) Входящие документы (Документооборот) (94)</li>
+<li>(EE) Исходящие документы (Документооборот) (95)</li>
+<li>(EE) Журнал операций (96)</li>
+<li>(EE) Выполнить расчет (97)</li>
+<li>(EE) Разнести документы (98)</li>
+<li>(EE) Удалить разноски (99)</li>
+<li>(EE) Подвести итог за период (100)</li>
+<li>(EE) Фактурирование платежей (101)</li>
+<li>(EE) Отчеты (102)</li>
+<li>(EE) Справочники (103)</li>
+<li>(EE) Настройка сбытовой организации (104)</li>
+<li>(EE) Адмистрирование (105)</li>
+<li>(EE) Настройка отчетов (106)</li>
+<li>(EE) Настройка невыясненных сумм (107)</li>
+<li>(EE) Расчетные ведомости (108)</li>
+<li>(EE) Новый платеж (109)</li>
+<li>(EE) Ограничения энергоснабжения (110)</li>
+<li>(EE) Выполнить расчет (балансовый метод) (111)</li>
+<li>(EE) Финансы (112)</li>
+</ul>
+<h1>Приложение 2. Сведения о файле конфигурации nethasp.ini</h1>
+<p>Конфигурационный файл nethasp.ini состоит из четырех секций, каждая из которых является необязательной:</p>
+<ul>
+<li><code>[NH_COMMON]</code> для общих настроек</li>
+<li><code>[NH_IPX]</code> для протокола IPX</li>
+<li><code>[NH_NETBIOS]</code> для протокола NetBios</li>
+<li><code>[NH_TCPIP]</code> для протокола TCP/IP</li>
+</ul>
+<p>Секция <code>[NH_COMMON]</code> содержит глобальные настройки для всех секций конфигурационного файла. Каждая из остальных секций содержит настройки, регулирующие операции конкретного протокола.</p>
+<p>В каждой секции могут быть заданы общие ключевые слова и/или ключевые слова, применяемые только в данной
+секции. Если общее ключевое слово задано в секции какого-либо из протоколов, для данного протокола данная настройка будет иметь приоритет по сравнению со значением в секции <code>[NH_COMMON]</code>.</p>
+<p>Символ «;» в начале строки является признаком закомментированной строки, такая строка не обрабатывается.</p>
+<h2>Общие ключевые слова</h2>
+<ul>
+<li><code>nh_session</code> - максимальный период времени, в течение которого защищенное приложение будет пытаться установить соединение с HASP LM. Возможное значение: <число>. По умолчанию – 2 секунды.</li>
+<li><code>nh_send_rcv</code> - максимальный период времени для HASP LM на получение и передачу пакетов. Возможное значение: <число>. По умолчанию – 1 секунда.</li>
+</ul>
+<h2>Ключевые слова только для секции <code>[NH_COMMON]</code></h2>
+<ul>
+<li><code>nh_ipx</code> - использовать протокол IPX? Возможные значения: <code>enabled</code>, <code>disabled</code>.</li>
+<li><code>nh_netbios</code> - использовать протокол NETBIOS? Возможные значения: <code>enabled</code>, <code>disabled</code>.</li>
+<li><code>nh_tcpip</code> - использовать протокол TCP/IP? Возможные значения: <code>enabled</code>, <code>disabled</code>.</li>
+</ul>
+<h2>Ключевые слова только для секции [NH_IPX]</h2>
+<ul>
+<li><code>nh_use_bindery</code> - использовать IPX с bindery (содержит имена и пароли пользователей для авторизации при регистрации на даном компьютере). Данный ключ заменяет ранее использовавшийся ключ <code>NH_USE_SAP</code>. Возможные значения: <code>enabled</code>, <code>disabled</code>. По умолчанию – <code>disabled</code>.</li>
+<li><code>nh_use_broadcast</code> - ипользовать механизм широковещания IPX. Возможные значения: <code>enabled</code>, <code>disabled</code>. По умолчанию – <code>enabled</code>.</li>
+<li><code>nh_bc_socket_num</code> - номер сокета для механизма широковещания. Возможное значение: <шестнадцатиричное
+число>. По умолчанию – <code>7483H</code>.</li>
+<li><code>nh_use_int</code> - возможные значения: <code>2F_NEW</code>, <code>7A_OLD</code>. По умолчанию – <code>2F_NEW</code>, означает, что
+протокол IPX будет использовать ТОЛЬКО прерывание 2Fh. <code>7F_OLD</code> означает, что протокол IPX
+будет использовать ТОЛЬКО прерывание 7Ah.</li>
+<li><code>nh_server_name</code> - имя экземпляра HASP LM. Максимальное количество имен – 6, максимальная длина имени – 7 символов (не является регистрозависимым).</li>
+<li><code>nh_search_method</code> - как защищенное приложение будет общаться с HASP LM: в локальной сети или в интернет. Возможные значения: <code>localnet</code>, <code>internet</code>. По умолчанию - <code>internet</code>.</li>
+<li><code>nh_datfile_path</code> - расположение адресного файла HASP LM</li>
+</ul>
+<h2>Ключевые слова только для секции <code>[NH_NETBIOS]</code></h2>
+<ul>
+<li><code>nh_nbname</code> - имя экземпляра HASP LM. Максимальное количество имен – одно, максимальное количество символов – 8 (не является регистрозависимым).</li>
+<li><code>nh_uselananum</code> - номер канала коммуникации.</li>
+</ul>
+<h2>Ключевые слова только для секции <code>[NH_TCPIP]</code></h2>
+<ul>
+<li><code>nh_server_addr</code> - IP-адреса всех необходимых менеджеров лицензий HASP. Количество адресов не
+ограничено, возможно перечисление в несколько строк. Формат задания IP-адреса: <code>192.114.176.65</code> или <code>ftp.aladdin.co.il</code></li>
+<li><code>nh_server_name</code> - имя экземпляра HASP LM. Максимальное количество имен – 6, максимальная длина имени – 7 символов (не является регистрозависимым).</li>
+<li><code>nh_port_number</code> - номер порта для протокола TCP/IP (опционально). По
+умолчанию – <code>475</code>.</li>
+<li><code>nh_tcpip_method</code> - метод отправки пакетов – TCP или UDP. Возможные значения: <code>TCP</code>, <code>UDP</code>. По умолчанию – <code>UDP</code>.</li>
+<li><code>nh_use_broadcast</code> - использовать широковещательный механизм UDP. Возможное значение: <code>enabled</code>, <code>disabled</code>. По умолчанию – <code>enabled</code>.</li>
+</ul>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
