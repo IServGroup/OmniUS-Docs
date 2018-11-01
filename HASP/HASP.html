@@ -76,7 +76,7 @@
   <h2>Sentinel HASP</h2>
   <ol>
   <li>Разрешить соединения по порту <code>1947</code> (и UDP и TCP)</li>
-  <li>Установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, в локальной сети - [<code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>](file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers!%20New\Sentinel_LDK_Run-time_setup.zip))</li>
+  <li>Установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/DownloadNotice.aspx?dID=8589947119">на сайте Sentinel по состоянию на 11.09.2018</a>, в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers!%20New\Sentinel_LDK_Run-time_setup.zip"><code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code></a>)</li>
   <li>Запустить консоль управления Sentinel Admin Control Center, перейдя в браузере по адресу <a href="http://localhost:1947">http://localhost:1947</a>, и разрешить удаленные подключения на вкладке <a href="http://localhost:1947/_int_/config_from.html">Access from Remote Clients</a>:
   <img src="img/sentinel-hasp-setup-server.png" alt="Access from Remote Clients" /></li>
   </ol>
@@ -126,7 +126,7 @@
   </ol>
   <p>Если в локальной сети запрещены широковещательные запросы и/или машина с ключом находится в другой подсети, чем машина пользователя, необходимо</p>
   <ol>
-  <li>установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&amp;c=End+User&amp;p=Sentinel+HASP&amp;o=Windows&amp;t=Runtime+%26+Device+Driver&amp;l=all">на сайте Sentinel</a>, в локальной сети - <code>[<code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>](file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers!%20New\Sentinel_LDK_Run-time_setup.zip)</code>)</li>
+  <li>установить драйвер Sentinel HASP Run time Environment (актуальная версия - <a href="https://sentinelcustomer.gemalto.com/sentineldownloads/?s=&amp;c=End+User&amp;p=Sentinel+HASP&amp;o=Windows&amp;t=Runtime+%26+Device+Driver&amp;l=all">на сайте Sentinel</a>, в локальной сети - <a href="file:///\\\fs02\Dev_Repository\Builds\Install%20HASP%20drivers!%20New\Sentinel_LDK_Run-time_setup.zip"><code>\\\fs02\Dev_Repository\Builds\Install HASP drivers\! New\Sentinel_LDK_Run-time_setup.zip</code>]</a></li>
   <li>запустить на пользовательской машине консоль управления Sentinel Admin Control Center перейдя в браузере по адресу <a href="http://localhost:1947">http://localhost:1947</a></li>
   <li>Указать адрес &quot;HASP-сервера&quot; на вкладке <a href="http://localhost:1947/_int_/config_to.html">Access to Remote License Managers</a> в поле <code>Remote License Search Parameters</code>:
   <img src="img/sentinel-hasp-setup-client.png" alt="Access to Remote License Managers" />, отключить широковещательные запросы (снять флаг &quot;<code>Broadcast Search for Remote Licenses</code>&quot;), если broadcast пакеты не обрабатываются; разрешить поиск ключей по сети (включить флаг &quot;<code>Allow Access to Remote Licenses</code>&quot;), если он по какой-либо причине ещё не разрешен.</li>
